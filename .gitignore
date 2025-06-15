@@ -1,0 +1,108 @@
+# === OS Specific ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Java Compilation ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Maven ===
+target/
+build/
+dependency-reduced-pom.xml
+release.properties
+buildNumber.properties
+
+# Maven Wrapper
+.mvn/
+!**/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# === Logs & Temporary Files ===
+logs/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# === Spring Boot Specific ===
+*.db
+*.h2.db
+*.mv.db
+*.trace.db
+*.pid
+*.exec
+*.iml
+
+# === IDEs ===
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# STS
+.apt_generated
+.springBeans
+.sts4-cache
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# === Test Reports ===
+test-output/
+surefire-reports/
+failsafe-reports/
+
+# === Environment/Secrets ===
+.env
+.env.*
+*.env.local
+application-dev.yml
+application-dev.properties
+
+# === Files to ignore globally in subprojects ===
+**/HELP.md
+**/README.md
+**/target/
+**/build/
+**/.idea/
+**/*.iml
+**/.classpath
+**/.project
+**/.settings/
+**/.vscode/
+
+# === Node-related (if frontend added later) ===
+node_modules/
+dist/
+build/
+
+# === Backup/Editor junk ===
+*.bak
+*.old
+*.orig
+*.rej
+
+# === Custom generated files ===
+*.generated.*
