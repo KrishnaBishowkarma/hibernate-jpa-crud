@@ -17,8 +17,25 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner -> {
-            createStudent(studentDAO);
+//            createStudent(studentDAO);
+
+            createMultipleStudent(studentDAO);
         };
+    }
+
+    private void createMultipleStudent(StudentDAO studentDAO) {
+
+        // create multiple student
+        System.out.println("Creating 3 student objects ...");
+        Student tempStudent1 = new Student("Krishna", "Bishowkarma", "contact@krishna-bk.com.np");
+        Student tempStudent2 = new Student("Naresh", "BK", "naresh@krishna-bk.com.np");
+        Student tempStudent3 = new Student("Bhim", "BK", "bhim@krishna-bk.com.np");
+
+        // save the student object\
+        System.out.println("Saving the student objects ...");
+        studentDAO.save(tempStudent1);
+        studentDAO.save(tempStudent2);
+        studentDAO.save(tempStudent3);
     }
 
     private void createStudent(StudentDAO studentDAO) {
