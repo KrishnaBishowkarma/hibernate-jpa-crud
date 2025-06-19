@@ -17,10 +17,34 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner -> {
-//            createStudent(studentDAO);
+            // createStudent(studentDAO);
 
-            createMultipleStudent(studentDAO);
+            // createMultipleStudent(studentDAO);
+
+            readStudent(studentDAO);
         };
+    }
+
+    private void readStudent(StudentDAO studentDAO) {
+
+        // create a student object
+        System.out.println("Creating student ...");
+        Student tempStudent = new Student("Ram", "Ji", "ram@krishna-bk.com.np");
+
+        // save the student
+        System.out.println("Saving the student ...");
+        studentDAO.save(tempStudent);
+
+        // display id of the saved student
+        int theId = tempStudent.getId();
+        System.out.println("Saved student. Generated ID: " + theId);
+
+        // retrieve student based on the id
+        System.out.println("Retrieving student with id: " + theId);
+        Student myStudent = studentDAO.findById(theId);
+
+        // display student
+        System.out.println("Found the student: " + myStudent);
     }
 
     private void createMultipleStudent(StudentDAO studentDAO) {
