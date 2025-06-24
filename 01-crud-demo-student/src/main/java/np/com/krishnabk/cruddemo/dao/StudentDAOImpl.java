@@ -35,6 +35,7 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Student> findAll() {
 
         // create query
