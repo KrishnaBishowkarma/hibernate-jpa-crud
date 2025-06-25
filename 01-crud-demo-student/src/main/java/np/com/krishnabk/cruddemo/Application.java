@@ -44,7 +44,7 @@ public class Application {
 
     private void queryForStudents(StudentDAO studentDAO) {
         // get a list of students
-        List<Student> theStudents =studentDAO.findAll();
+        List<Student> theStudents = studentDAO.findAll();
 
         // display list of students
         for (Student tempStudent : theStudents){
