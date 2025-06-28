@@ -40,9 +40,9 @@ public class Application {
         System.out.println("Getting student with id: " + studentId);
         Student myStudent = studentDAO.findById(studentId);
 
-        // change first name to "Scooby"
+        // change first name back to "Krishna"
         System.out.println("Updating student ...");
-        myStudent.setFirstName("Scooby");
+        myStudent.setFirstName("Krishna");
 
         // update the student
         studentDAO.update(myStudent);
