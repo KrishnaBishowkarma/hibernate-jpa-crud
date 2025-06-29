@@ -62,6 +62,5 @@ public class StudentDAOImpl implements StudentDAO{
     @Transactional
     public void update(Student theStudent) {
         entityManager.merge(theStudent);
-        entityManager.merge(theStudent);
     }
 }
