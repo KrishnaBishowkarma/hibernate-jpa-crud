@@ -65,6 +65,7 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
+    @Transactional
     public void delete(Integer id) {
 
         // retrieve the student
