@@ -21,7 +21,7 @@ public class Application {
         return runner -> {
             // createStudent(studentDAO);
 
-            // createMultipleStudent(studentDAO);
+             createMultipleStudent(studentDAO);
 
             // readStudent(studentDAO);
 
@@ -29,8 +29,22 @@ public class Application {
 
             // queryForStudentsByLastName(studentDAO);
 
-            updateStudent(studentDAO);
+            // updateStudent(studentDAO);
+
+            // deleteStudent(studentDAO);
         };
+    }
+
+    private void deleteStudent(StudentDAO studentDAO) {
+
+        // retrieve student based on the id: primary key
+        int studentId = 9;
+        System.out.println("Deleting student with id: " + studentId);
+
+        // delete the student
+        studentDAO.delete(studentId);
+
+
     }
 
     private void updateStudent(StudentDAO studentDAO) {
