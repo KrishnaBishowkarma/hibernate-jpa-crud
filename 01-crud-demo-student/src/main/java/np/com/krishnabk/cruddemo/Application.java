@@ -21,7 +21,7 @@ public class Application {
         return runner -> {
             // createStudent(studentDAO);
 
-            // createMultipleStudent(studentDAO);
+             createMultipleStudent(studentDAO);
 
             // readStudent(studentDAO);
 
@@ -31,7 +31,7 @@ public class Application {
 
             // updateStudent(studentDAO);
 
-             deleteStudent(studentDAO);
+            // deleteStudent(studentDAO);
         };
     }
 
